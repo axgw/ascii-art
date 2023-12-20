@@ -20,9 +20,6 @@ def get_brightness_matrix(pixel_matrix: []):
     return matrix_brightness
 
 
-# no sé lo que estoy haciendo
-
-
 
 
 
