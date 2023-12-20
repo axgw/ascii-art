@@ -11,15 +11,11 @@ def get_pixel_matrix(img_file: str):
 
 
 def get_brightness_matrix(pixel_matrix: []):
-    matrix_brightness = []
-    for row in pixel_matrix:
-        row_brightness = []
-        for pixel in row:
-            row_brightness.append(round((pixel[0] + pixel[1] + pixel[2]) / 3.0))
-        matrix_brightness.append(row_brightness)
+    matrix_brightness = [[0 for _ in i] for i in pixel_matrix]
+    for x, row in enumerate(pixel_matrix):
+        for y, pixel in enumerate(row):
+            matrix_brightness[x][y] = (round((pixel[0] + pixel[1] + pixel[2]) / 3.0))
     return matrix_brightness
-
-
 
 
 
